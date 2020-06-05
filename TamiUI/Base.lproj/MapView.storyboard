@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wjv-w2-zxk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="2zR-Xs-QCf">
+            <objects>
+                <viewController id="Wjv-w2-zxk" userLabel="Map View Controller" customClass="SimpleMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1G8-qF-g8Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="RX2-PS-9HH"/>
+                    </layoutGuides>
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="7lI-cy-DUi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aId-bh-5Mi" customClass="XMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecX-ez-30Q" userLabel="Top Bar View">
+                                <rect key="frame" x="0.0" y="10" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" tag="99" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPM-Q5-AU2" userLabel="Menu Btn">
+                                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="1pA-Tv-nHa"/>
+                                            <constraint firstAttribute="width" constant="40" id="Sr1-uk-A2a"/>
+                                            <constraint firstAttribute="height" constant="40" id="gms-HC-d3A"/>
+                                            <constraint firstAttribute="width" constant="40" id="x2e-3e-Orn"/>
+                                        </constraints>
+                                        <state key="normal" image="Nav Bar Button"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1pA-Tv-nHa"/>
+                                                <exclude reference="x2e-3e-Orn"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="clickButton:" destination="Wjv-w2-zxk" eventType="touchUpInside" id="GZ1-CA-9u0"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUc-3l-lWx">
+                                        <rect key="frame" x="210" y="0.0" width="183" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Hq-SaN" userLabel="Search Btn">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <state key="normal" image="Search Padded"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuG-6L-beY" userLabel="Flip Btn">
+                                                <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                                <state key="normal" image="List View Toggle Padded"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-N9-3y0" userLabel="Create Btn">
+                                                <rect key="frame" x="100" y="0.0" width="33" height="50"/>
+                                                <state key="normal" image="Create White"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ff-rm-mOc" userLabel="Logo Btn">
+                                                <rect key="frame" x="133" y="0.0" width="50" height="50"/>
+                                                <state key="normal" image="Blip Selector Padded"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="19" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fu-43-10a">
+                                        <rect key="frame" x="410" y="5" width="161" height="41"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPF-Ah-gnd" userLabel="Biz Btn">
+                                                <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <state key="normal" image="Business Blip Map"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-Hf-VQe" userLabel="Deals Btn">
+                                                <rect key="frame" x="60" y="0.0" width="41" height="41"/>
+                                                <state key="normal" image="Deals Blip"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lD-FC-cSd" userLabel="Svc Btn">
+                                                <rect key="frame" x="120" y="0.0" width="41" height="41"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                <state key="normal" image="Service Blip"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jt6-RF-c3n" customClass="RichTextField">
+                                        <rect key="frame" x="53" y="10" width="200" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="E6A-HS-Fgv"/>
+                                            <constraint firstAttribute="width" constant="200" id="NRw-YZ-hjf"/>
+                                            <constraint firstAttribute="height" constant="30" id="P6w-jn-aVm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="E6A-HS-Fgv"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jt6-RF-c3n" firstAttribute="top" secondItem="ecX-ez-30Q" secondAttribute="top" constant="10" id="1BN-zz-4Jb"/>
+                                    <constraint firstItem="jt6-RF-c3n" firstAttribute="centerY" secondItem="MPM-Q5-AU2" secondAttribute="centerY" id="8li-b7-jC1"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="leading" secondItem="ecX-ez-30Q" secondAttribute="leading" constant="10" id="AlQ-fO-LOb"/>
+                                    <constraint firstItem="jt6-RF-c3n" firstAttribute="leading" secondItem="MPM-Q5-AU2" secondAttribute="trailing" constant="10" id="BBC-zH-10U"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="leading" secondItem="ecX-ez-30Q" secondAttribute="leading" constant="5" id="I65-hK-WJp"/>
+                                    <constraint firstAttribute="height" constant="50" id="MG6-rV-Rqz"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="top" secondItem="ecX-ez-30Q" secondAttribute="top" constant="5" id="WJh-47-9OR"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="leading" secondItem="ecX-ez-30Q" secondAttribute="leadingMargin" id="Zss-Qi-glG"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="centerY" secondItem="ecX-ez-30Q" secondAttribute="centerY" id="bKk-Ce-44F"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="top" secondItem="ecX-ez-30Q" secondAttribute="top" constant="5" id="cDG-c2-ypw"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="centerY" secondItem="ecX-ez-30Q" secondAttribute="centerY" id="hhn-B8-phL"/>
+                                    <constraint firstItem="jt6-RF-c3n" firstAttribute="top" secondItem="ecX-ez-30Q" secondAttribute="top" constant="10" id="jri-DI-obY"/>
+                                    <constraint firstItem="jt6-RF-c3n" firstAttribute="leading" secondItem="MPM-Q5-AU2" secondAttribute="trailing" constant="10" id="xzs-JI-dIc"/>
+                                    <constraint firstItem="jt6-RF-c3n" firstAttribute="leading" secondItem="MPM-Q5-AU2" secondAttribute="trailing" constant="10" id="yLm-vt-mwQ"/>
+                                    <constraint firstItem="MPM-Q5-AU2" firstAttribute="centerY" secondItem="jt6-RF-c3n" secondAttribute="centerY" id="zbJ-me-TtL"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AlQ-fO-LOb"/>
+                                        <exclude reference="WJh-47-9OR"/>
+                                        <exclude reference="Zss-Qi-glG"/>
+                                        <exclude reference="hhn-B8-phL"/>
+                                        <exclude reference="8li-b7-jC1"/>
+                                        <exclude reference="BBC-zH-10U"/>
+                                        <exclude reference="jri-DI-obY"/>
+                                        <exclude reference="xzs-JI-dIc"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ih0-cp-fdN" userLabel="launchPadView">
+                                <rect key="frame" x="57" y="608" width="300" height="128"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Oval 626.png" translatesAutoresizingMaskIntoConstraints="NO" id="slw-lx-nka">
+                                        <rect key="frame" x="76" y="21" width="148" height="104"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="84" placeholderIntrinsicHeight="42" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="HBl-b2-rIf">
+                                        <rect key="frame" x="98" y="21" width="111" height="46"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kd-7c-YFc" userLabel="reloadBtn">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                                <state key="normal" image="Map Refresh"/>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="Wjv-w2-zxk" eventType="touchUpInside" id="6Jf-Oh-CZz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY7-ke-m1u" userLabel="audioButton">
+                                                <rect key="frame" x="65" y="0.0" width="46" height="46"/>
+                                                <state key="normal" image="Map Mute"/>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="Wjv-w2-zxk" eventType="touchUpInside" id="pbi-j0-nZU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="jYV-9Q-QKl">
+                                        <rect key="frame" x="56" y="74" width="191" height="46"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ch-U5-vcg" userLabel="locateBtn">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                                                <state key="normal" image="Map Location"/>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="Wjv-w2-zxk" eventType="touchUpInside" id="Ubo-rA-2pm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqy-fv-lAg" userLabel="zoomButton">
+                                                <rect key="frame" x="146" y="0.0" width="45" height="46"/>
+                                                <state key="normal" image="Map Zoom"/>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="Wjv-w2-zxk" eventType="touchUpInside" id="63Z-jb-fOI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="HBl-b2-rIf" firstAttribute="centerX" secondItem="slw-lx-nka" secondAttribute="centerX" id="92d-8E-0Na"/>
+                                    <constraint firstItem="HBl-b2-rIf" firstAttribute="top" secondItem="Ih0-cp-fdN" secondAttribute="top" constant="21" id="9FQ-I1-Sdz"/>
+                                    <constraint firstItem="HBl-b2-rIf" firstAttribute="top" secondItem="slw-lx-nka" secondAttribute="top" id="QdG-nq-0Ho"/>
+                                    <constraint firstAttribute="height" constant="128" id="UU2-vw-mC6"/>
+                                    <constraint firstItem="HBl-b2-rIf" firstAttribute="centerX" secondItem="Ih0-cp-fdN" secondAttribute="centerX" id="X4i-oM-cT1"/>
+                                    <constraint firstItem="jYV-9Q-QKl" firstAttribute="centerX" secondItem="HBl-b2-rIf" secondAttribute="centerX" id="aF8-3k-eCM"/>
+                                    <constraint firstAttribute="width" constant="300" id="adz-QQ-ce8"/>
+                                    <constraint firstItem="slw-lx-nka" firstAttribute="leading" secondItem="Ih0-cp-fdN" secondAttribute="leading" constant="76" id="ehZ-dY-TxS"/>
+                                    <constraint firstItem="jYV-9Q-QKl" firstAttribute="bottom" secondItem="Ih0-cp-fdN" secondAttribute="bottomMargin" id="en8-XU-PSY"/>
+                                    <constraint firstItem="HBl-b2-rIf" firstAttribute="top" secondItem="Ih0-cp-fdN" secondAttribute="top" constant="21" id="lP6-Ne-tk5"/>
+                                    <constraint firstAttribute="bottom" secondItem="slw-lx-nka" secondAttribute="bottom" constant="3" id="vdT-uD-bJ6"/>
+                                    <constraint firstItem="HBl-b2-rIf" firstAttribute="centerX" secondItem="Ih0-cp-fdN" secondAttribute="centerX" id="xpL-KV-dJC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="X4i-oM-cT1"/>
+                                        <exclude reference="lP6-Ne-tk5"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="150" y="672" width="300" height="128"/>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zml-tS-dbi" userLabel="launchButton">
+                                <rect key="frame" x="182" y="683" width="51" height="51"/>
+                                <state key="normal" image="Map Controls"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="275" y="747" width="51" height="51"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clickButton:" destination="Wjv-w2-zxk" eventType="touchUpInside" id="EH5-xk-piW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zml-tS-dbi" firstAttribute="centerX" secondItem="Ih0-cp-fdN" secondAttribute="centerX" id="18M-qM-0aS"/>
+                            <constraint firstItem="Ih0-cp-fdN" firstAttribute="centerX" secondItem="ecX-ez-30Q" secondAttribute="centerX" id="4MK-my-LRO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ih0-cp-fdN" secondAttribute="trailing" constant="130" id="9Ua-eU-STE"/>
+                            <constraint firstItem="Ih0-cp-fdN" firstAttribute="centerX" secondItem="ecX-ez-30Q" secondAttribute="centerX" id="AW9-0Q-PDT"/>
+                            <constraint firstItem="Ih0-cp-fdN" firstAttribute="leading" secondItem="7lI-cy-DUi" secondAttribute="leadingMargin" constant="130" id="DLu-VG-dmy"/>
+                            <constraint firstItem="Ih0-cp-fdN" firstAttribute="top" secondItem="7lI-cy-DUi" secondAttribute="top" constant="472" id="HDU-s9-Jml"/>
+                            <constraint firstAttribute="bottom" secondItem="ecX-ez-30Q" secondAttribute="bottom" constant="540" id="Hoc-qY-6lt"/>
+                            <constraint firstItem="Ih0-cp-fdN" firstAttribute="leading" secondItem="7lI-cy-DUi" secondAttribute="leading" constant="150" id="IX7-HE-CeO"/>
+                            <constraint firstAttribute="bottom" secondItem="ecX-ez-30Q" secondAttribute="bottom" constant="540" id="OON-ut-ZNA"/>
+                            <constraint firstItem="ecX-ez-30Q" firstAttribute="top" secondItem="1G8-qF-g8Z" secondAttribute="bottom" constant="10" id="PT8-vh-en5"/>
+                            <constraint firstItem="RX2-PS-9HH" firstAttribute="top" secondItem="zml-tS-dbi" secondAttribute="bottom" constant="2" id="UqQ-p2-XDM"/>
+                            <constraint firstItem="RX2-PS-9HH" firstAttribute="top" secondItem="aId-bh-5Mi" secondAttribute="bottom" id="YiX-8W-NoP"/>
+                            <constraint firstItem="ecX-ez-30Q" firstAttribute="leading" secondItem="aId-bh-5Mi" secondAttribute="leading" id="ZaG-fQ-SME"/>
+                            <constraint firstItem="ecX-ez-30Q" firstAttribute="top" secondItem="1G8-qF-g8Z" secondAttribute="bottom" constant="10" id="jlH-MO-LB8"/>
+                            <constraint firstItem="RX2-PS-9HH" firstAttribute="top" secondItem="Ih0-cp-fdN" secondAttribute="bottom" id="nPa-c0-g0S"/>
+                            <constraint firstItem="Ih0-cp-fdN" firstAttribute="bottom" secondItem="RX2-PS-9HH" secondAttribute="top" id="qto-0i-g60"/>
+                            <constraint firstItem="ecX-ez-30Q" firstAttribute="trailing" secondItem="aId-bh-5Mi" secondAttribute="trailing" id="rZY-k7-Sae"/>
+                            <constraint firstItem="ecX-ez-30Q" firstAttribute="centerX" secondItem="zml-tS-dbi" secondAttribute="centerX" id="uqC-Yd-9tM"/>
+                            <constraint firstItem="aId-bh-5Mi" firstAttribute="top" secondItem="1G8-qF-g8Z" secondAttribute="bottom" id="v1t-bQ-0H6"/>
+                            <constraint firstItem="Ih0-cp-fdN" firstAttribute="top" secondItem="7lI-cy-DUi" secondAttribute="top" constant="472" id="wPZ-Pn-2Bl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hoc-qY-6lt"/>
+                                <exclude reference="OON-ut-ZNA"/>
+                                <exclude reference="PT8-vh-en5"/>
+                                <exclude reference="4MK-my-LRO"/>
+                                <exclude reference="9Ua-eU-STE"/>
+                                <exclude reference="AW9-0Q-PDT"/>
+                                <exclude reference="DLu-VG-dmy"/>
+                                <exclude reference="HDU-s9-Jml"/>
+                                <exclude reference="IX7-HE-CeO"/>
+                                <exclude reference="wPZ-Pn-2Bl"/>
+                                <exclude reference="nPa-c0-g0S"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="launchPadView" destination="Ih0-cp-fdN" id="pxd-gY-FjW"/>
+                        <outlet property="xMapView" destination="aId-bh-5Mi" id="Qmq-Ah-YvS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19e-m1-NV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="UmS-7n-efT"/>
+            </objects>
+            <point key="canvasLocation" x="-199" y="1406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Blip Selector Padded" width="50" height="50"/>
+        <image name="Business Blip Map" width="41" height="41"/>
+        <image name="Create White" width="33" height="33"/>
+        <image name="Deals Blip" width="41" height="41"/>
+        <image name="List View Toggle Padded" width="50" height="50"/>
+        <image name="Map Controls" width="51" height="51"/>
+        <image name="Map Location" width="46" height="46"/>
+        <image name="Map Mute" width="46" height="46"/>
+        <image name="Map Refresh" width="46" height="46"/>
+        <image name="Map Zoom" width="45" height="46"/>
+        <image name="Nav Bar Button" width="23" height="15"/>
+        <image name="Oval 626.png" width="151" height="106"/>
+        <image name="Search Padded" width="50" height="50"/>
+        <image name="Service Blip" width="41" height="41"/>
+    </resources>
+</document>

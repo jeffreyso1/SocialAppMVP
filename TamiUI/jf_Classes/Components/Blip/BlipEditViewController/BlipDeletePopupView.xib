@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlipDeletePopupView">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="155"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1v8-AH-ytL">
+                    <rect key="frame" x="0.0" y="0.0" width="260" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DELETE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVw-X1-gCI" customClass="UILabelKerning">
+                            <rect key="frame" x="108" y="9" width="44" height="17"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.83921568629999999" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="IPf-qn-UFh"/>
+                        <constraint firstItem="pVw-X1-gCI" firstAttribute="centerY" secondItem="1v8-AH-ytL" secondAttribute="centerY" id="mha-Ka-mWD"/>
+                        <constraint firstItem="pVw-X1-gCI" firstAttribute="centerX" secondItem="1v8-AH-ytL" secondAttribute="centerX" id="rfp-Xm-TGG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to delete this Blip?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6Q-T9-Un4">
+                    <rect key="frame" x="30" y="55" width="200" height="41"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                    <color key="textColor" red="0.45490196078431372" green="0.45490196078431372" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycT-5O-RBx">
+                    <rect key="frame" x="80" y="108" width="25" height="25"/>
+                    <state key="normal" image="Confirm">
+                        <color key="titleColor" red="0.83921568629999999" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" image="Confirm-active"/>
+                    <connections>
+                        <action selector="didClickedConfirm:" destination="-1" eventType="touchUpInside" id="nAC-Qg-hb3"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-OX-WGk">
+                    <rect key="frame" x="155" y="108" width="25" height="25"/>
+                    <state key="normal" image="Cancel">
+                        <color key="titleColor" red="0.83921568629999999" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickedCancel:" destination="-1" eventType="touchUpInside" id="X4s-pA-3cf"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JV1-TT-tyZ">
+                    <rect key="frame" x="0.0" y="22" width="260" height="13"/>
+                    <color key="backgroundColor" red="0.83921568629999999" green="0.36862745099999999" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="RCW-va-cZB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JV1-TT-tyZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="04j-Se-DWI"/>
+                <constraint firstItem="JV1-TT-tyZ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="1c9-ow-3tn"/>
+                <constraint firstAttribute="trailing" secondItem="gTV-OX-WGk" secondAttribute="trailing" constant="80" id="3Ez-0S-8QH"/>
+                <constraint firstItem="ycT-5O-RBx" firstAttribute="top" secondItem="N6Q-T9-Un4" secondAttribute="bottom" constant="12" id="5by-U0-RWC"/>
+                <constraint firstAttribute="trailing" secondItem="N6Q-T9-Un4" secondAttribute="trailing" constant="30" id="7Ll-fF-6ba"/>
+                <constraint firstItem="1v8-AH-ytL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="I7g-yE-g44"/>
+                <constraint firstItem="N6Q-T9-Un4" firstAttribute="top" secondItem="1v8-AH-ytL" secondAttribute="bottom" constant="20" id="Mm5-6n-T92"/>
+                <constraint firstItem="gTV-OX-WGk" firstAttribute="top" secondItem="N6Q-T9-Un4" secondAttribute="bottom" constant="12" id="QAB-OC-cso"/>
+                <constraint firstItem="1v8-AH-ytL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fU9-Gr-7iT"/>
+                <constraint firstItem="JV1-TT-tyZ" firstAttribute="bottom" secondItem="1v8-AH-ytL" secondAttribute="bottom" id="ilm-be-esG"/>
+                <constraint firstItem="1v8-AH-ytL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="nE6-t2-AqZ"/>
+                <constraint firstItem="ycT-5O-RBx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="80" id="p7C-y8-RN2"/>
+                <constraint firstItem="N6Q-T9-Un4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="qBS-fq-WRv"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="210" y="374"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cancel" width="25" height="25"/>
+        <image name="Confirm" width="25" height="25"/>
+        <image name="Confirm-active" width="25" height="25"/>
+    </resources>
+</document>

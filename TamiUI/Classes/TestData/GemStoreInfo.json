@@ -1,0 +1,26 @@
+ {
+  "profileImageUrl":"http://www.splitshire.com/wp-content/uploads/2014/12/SplitShire-8565-768x506.jpg",
+  "redGemCount":2012,
+  "blueGemCount":11426,
+     "storeItems": [{
+               "price":0.50,
+               "itemName":"250 Gems"
+               },
+               {
+               "price":1.00,
+               "bonus":"1 Core",
+               "itemName":"520 Gems"
+               },{
+               "price":2.00,
+               "bonus":"2 Cores",
+               "itemName":"1200 Gems"
+               },{
+               "price":5.00,
+               "bonus":"Triple AP/G Booster",
+               "itemName":"3500 Gems + 5 Cores"
+               },{
+               "price":10.00,
+               "bonus":"Featured Blip",
+               "itemName":"10000 Gems + 7 Cores"
+               }]
+  }

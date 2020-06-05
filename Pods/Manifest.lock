@@ -1,0 +1,63 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - DateTools (1.7.0)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - IQKeyboardManager (3.3.7)
+  - JSONModel (1.2.0)
+  - MBAutoGrowingTextView (0.1.0)
+  - NYTPhotoViewer (1.1.0):
+    - NYTPhotoViewer/AnimatedGifSupport (= 1.1.0)
+    - NYTPhotoViewer/Core (= 1.1.0)
+  - NYTPhotoViewer/AnimatedGifSupport (1.1.0):
+    - FLAnimatedImage (~> 1.0.8)
+    - NYTPhotoViewer/Core
+  - NYTPhotoViewer/Core (1.1.0)
+  - REFrostedViewController (2.4.8)
+  - YYModel (1.0.4)
+  - YYText (1.0.5)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - DateTools
+  - FMDB
+  - IQKeyboardManager (~> 3.3.7)
+  - JSONModel
+  - MBAutoGrowingTextView (~> 0.1.0)
+  - NYTPhotoViewer (~> 1.1.0)
+  - REFrostedViewController (~> 2.4)
+  - YYModel
+  - YYText
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  MBAutoGrowingTextView: 3955d4513be3d184fe2cb7739999c1f994dcd4d5
+  NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
+  REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: ac09660c9ccd9b817f409a20caa6f5587444d2ae
+
+PODFILE CHECKSUM: 3e756bc292c397adbc3869f33ec0e139d2887c71
+
+COCOAPODS: 1.3.1

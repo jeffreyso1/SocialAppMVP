@@ -1,0 +1,7 @@
+ource 'https://github.com/CocoaPods/Specs.git'
+        pod 'GoogleMaps'
+    source 'https://github.com/CocoaPods/Specs.git'
+    platform :ios, '8.0'
+    pod 'AFNetworking', '~> 3.0'
+    pod 'Flurry-iOS-SDK/FlurrySDK'
+end

@@ -1,0 +1,36 @@
+[
+ {
+ "latitude":43.338992,
+ "longitude": -79.169562,
+ "markerId":"1234",
+ "markerTitle":"What a wonderful night #1!",
+ "markerType":"Social",
+ "verified":"NO",
+ "distance":500,
+ "radius":500
+
+ },
+ {
+ "latitude":43.828992,
+ "longitude": -79.329562,
+ "markerId":"1234",
+ "markerTitle":"What a wonderful night #2!",
+ "markerType":"Social",
+ "verified":"NO",
+ "distance":500,
+ "radius":500
+
+ 
+ },
+ {
+ "latitude":43.893942,
+ "longitude": -79.332140,
+ "markerId":"1234",
+ "markerTitle":"What a wonderful night #3",
+ "markerType":"Social",
+ "verified":"NO",
+ "distance":500,
+ "radius":500
+
+ 
+ }]
