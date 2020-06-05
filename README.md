@@ -1,8 +1,8 @@
 # Introduction
 
-This miminum visible product was built independently by me as part of a contract with a client. The project was intended to be a food service for service for students. 
+This miminum visible product was built independently by me as part of a contract with a client. The project was intended to be a social app with geolocation social events and advertisement. 
 
-No UI design was provided, so I took inspirations from existing products on the market and previous projects.
+UI design was provided, I was responsible for implementing the design in native iOS.
 
 # Technology
 
@@ -31,4 +31,8 @@ No UI design was provided, so I took inspirations from existing products on the 
 <p float="left">
   <img src="./screenshots/9.png" width="35%" />
   <img src="./screenshots/10.png" width="35%" />
+</p>
+<p float="left">
+  <img src="./screenshots/11.png" width="35%" />
+  <img src="./screenshots/12.png" width="35%" />
 </p>
